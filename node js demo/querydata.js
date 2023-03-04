@@ -20,4 +20,4 @@ if(req.url==="/add"&&req.method==="GET"){
 
     })
 
-server.listen(3001,()=>console.log("server has started in port no : 3001"))
+server.listen(3002,()=>console.log("server has started in port no : 3001"))
