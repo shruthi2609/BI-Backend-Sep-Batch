@@ -2,12 +2,7 @@ DataBases:
 SQL vs NoSql
 
 Structured query language:
-
-
 Nosql:
-
-
-
 mongoDB shell
 mongoose
 mongodb compass
