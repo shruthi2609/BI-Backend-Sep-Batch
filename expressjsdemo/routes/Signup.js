@@ -10,10 +10,13 @@ router.post("/signup",(req,res)=>{
         phone:data.phone,
         admin:data.admin
     })
-    user.save().then((success)=>res.send("signup successfull")).then((err)=>res.send({
+    user.save().then((success)=>res.send(JSON.stringify({
+        "msg":" successfull",
+        "status":true
+    }))).then((err)=>res.send(JSON.stringify({
         "msg":"not successfull",
         "err":err
-    }))
+    })))
    
 })
 module.exports=router
