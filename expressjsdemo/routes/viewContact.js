@@ -1,6 +1,7 @@
 const express=require("express")
 const router=express.Router()
 const ContactManager=require("../models/ContactManager")
+
 router.get("/viewAll",async (req,res)=>{
 try{
     const result=await ContactManager.find()
@@ -13,5 +14,7 @@ catch(e){
     }))
 }
 })
+
+
 
 module.exports=router

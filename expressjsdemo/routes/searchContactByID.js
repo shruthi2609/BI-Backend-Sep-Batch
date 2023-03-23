@@ -1,10 +1,12 @@
 const express=require("express")
 const router=express.Router()
 const ContactManager=require("../models/ContactManager")
-router.get("/search",async (req,res)=>{
+router.get("/searchbyid",async (req,res)=>{
 const search=req.query
+console.log("id",search)
 try{
-    const result=await ContactManager.find({fname:search.fname})
+    const result=await ContactManager.findById(search.id)
+    console.log(result)
     if(result)
     res.send(JSON.stringify(result))
     else
