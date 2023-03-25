@@ -14,6 +14,7 @@ router.get("/deleteContact",async (req,res)=>{
 
 router.get("/deleteById",async (req,res)=>{
     try{
+        console.log(req.query)
         const data=req.query
         const result=await ContactManager.findByIdAndDelete(data.id)
         res.send(result)

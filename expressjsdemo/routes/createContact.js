@@ -12,10 +12,12 @@ try{
     await contact.save()
     res.send(JSON.stringify({
         msg:"create",
-        status:true
+        status:true,
+
     }))
 }
 catch(e){
+    console.log(e)
     res.send(JSON.stringify({
         msg:"error in creating contact",
         status:false
